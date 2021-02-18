@@ -1,0 +1,104 @@
+$navbar-light-active-color: #2DB5B3;
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.5;
+  display: none;
+  z-index: 10;
+}
+
+.navbar-container {
+  z-index: 20;
+  position: relative;
+  background-color: #fff;
+}
+
+header {
+  box-shadow: 0px 4px 25px rgba(77, 173, 227, 0.2);
+  margin-bottom: 22px;
+}
+
+.navbar.navbar-expand-lg.navbar-light {
+  padding: 0;
+  .navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-toggler{
+    outline: none;
+    background-color: $navbar-light-active-color;
+    &[aria-expanded="false"] {
+      .navbar-toggler-icon {
+        background-image: image-url('menu-burger.svg');
+      }
+    }
+    &[aria-expanded="true"] {
+      .navbar-toggler-icon {
+        background-image: image-url('menu-close.svg');
+      }
+    }
+  }
+  .navbar-collapse {
+    background-color: #0D3857;
+    margin-left: -15px;
+    margin-right: -15px;
+    .nav-link {
+      color: #fff;
+      line-height: 17px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      &.active {
+        color: $navbar-light-active-color;
+      }
+    }
+    .text-active {
+      color: $navbar-light-active-color;
+    }
+  }
+  .nav-item {
+    max-width: unset;
+    &:not(:last-child) {
+      border-bottom: 1px solid #1D4D6F;
+    }
+    &.active {
+      border-bottom: 4px solid $navbar-light-active-color;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar.navbar-expand-lg.navbar-light{
+    .navbar-collapse {
+      background-color: inherit;
+      margin-left: inherit;
+      margin-right: inherit;
+      .nav-link {
+        color: #0D3857;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        margin-left: 10px;
+        font-size: 14px;
+        &.active {
+          color: $navbar-light-active-color;
+        }
+        &:hover {
+          color: $navbar-light-active-color;
+        };
+      }
+    }
+    .nav-item {
+      &:not(:last-child) {
+        border-bottom: 0;
+      }
+      &.mwp-135 {
+        max-width: 135px;
+      }
+      &.mwp-100 {
+        max-width: 100px;
+      }
+    }
+  }
+}

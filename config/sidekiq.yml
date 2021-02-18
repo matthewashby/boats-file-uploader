@@ -1,0 +1,6 @@
+:verbose: true
+:concurrency: 5
+:queues:
+  - ['priority', 5]
+  - ['default', 1]
+  - ['mailers', 1]

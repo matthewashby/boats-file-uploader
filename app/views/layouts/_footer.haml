@@ -1,0 +1,28 @@
+%footer
+  .container
+    .row.flex-sm-row-reverse
+      .col-12.col-md-9
+        .d-flex.flex-column.flex-sm-row.justify-content-evenly
+          .footer-item-container
+            .d-flex.flex-column
+              = link_to 'About Me', about_path, class: active_if(body_id == 'home-about')
+              = link_to 'Do I need a Career Coach?', '/#consultation'
+              = link_to 'Services', products_and_services_path, class: active_if(body_id == 'home-products_and_services')
+              = link_to 'Job Market Index', job_market_index_path, class: active_if(body_id == 'home-job_market_index')
+          .footer-item-container
+            .d-flex.flex-column
+              = link_to "FAQ's", '/faq', class: active_if(body_id == 'home-faq')
+              = link_to "Media", '/media', class: active_if(body_id == 'home-media')
+              = link_to "Blog", '/blog', class: active_if(body_id.include?('blog'))
+              = link_to "Contact", '/#contact'
+          .footer-item-container.d-flex.justify-content-center
+            .d-flex.flex-column
+              = link_to "T&C", '/terms-and-conditions', class:  active_if(body_id == 'home-terms_and_conditions')
+              = link_to "Privacy Policy", '/privacy-policy', class:  active_if(body_id == 'home-privacy_policy')
+              = link_to "Sitemap", '/sitemap', class:  active_if(body_id == 'home-sitemap')
+      .col-12.col-md-3
+        = link_to root_path do
+          = image_tag('logo-footer.svg', alt: 'Logo footer')
+        .copy-right.text-center
+          .text-white &copy; 2021 CityCareerLAB all rights reserved.
+          = link_to 'Designed & Built by DomainSnipe', 'https://domainsnipe.uk', target: :_blank, rel: 'noopener', class: 'copy-right'

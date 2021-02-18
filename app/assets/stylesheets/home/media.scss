@@ -1,0 +1,57 @@
+.text-dark-blue {
+  color: #0D3857 !important;
+}
+
+#home-media {
+  section.podcasts-videos {
+    background-image: image-url('media-podcasts-videos.svg'), linear-gradient(180deg, #FFFFFF 0%, #D9F4FF 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 575px) {
+      background-image: image-url('media-podcasts-videos-mobile.svg'), linear-gradient(180deg, #E7F8FF 0%, #FFFFFF 47.92%, #D2F2FF 100%);
+    }
+  }
+
+  .subscribe-container {
+    p {
+      font-size: 1.3rem !important;
+      margin-right: 1rem !important;
+    }
+  }
+  .leading.page-title {
+    margin-bottom: 36px;
+  }
+
+  section.episodes {
+    min-height: 1px;
+    background-image: image-url('episodes-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 68px 0;
+
+    .card.episode {
+      // height: 200px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+section.stay-in-touch {
+  background-image: image-url('stay-in-touch-bg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  > .container {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
+
+@media (max-width: 575px) {
+  .font-size-24.schedule-meeting {
+    font-size: 1rem !important;
+  }
+}

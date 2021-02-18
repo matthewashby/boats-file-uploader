@@ -1,0 +1,7 @@
+en:
+  activerecord:
+    attributes:
+      post:
+        meta_tags: Meta keywords
+      order:
+        postal_code: 'Post/Zip Code'

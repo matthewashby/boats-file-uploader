@@ -1,0 +1,348 @@
+#home-products_and_services {
+  $dark-blue: #062E4B;
+  $light-blue: #0D3857;
+  $lighter-blue: #19496B;
+  $standard-edition: #0A98C1;
+  $premium-edition: #2DB5B3;
+
+  font-family: 'Poppins', sans-serif;
+  color: #0D3857;
+
+  .dark-blue-bg {
+    background-color: $dark-blue;
+  }
+  .light-blue-bg {
+    background-color: $light-blue;
+  }
+  .lighter-blue-bg {
+    background-color: $lighter-blue;
+  }
+  .standard-bg {
+    background-color: $standard-edition;
+  }
+  .premium-bg {
+    background-color: $premium-edition;
+  }
+
+  #packagesModal {
+    .modal-dialog {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .modal-body {
+      font-size: 14px;
+    }
+  }
+
+  .sections-menu {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .pricing-table-header {
+      font-weight: 300;
+      font-size: 23px;
+      &-type {
+        font-weight: 600;
+      }
+    }
+    .pricing-table-content {
+      padding: 30px 20px;
+      a {
+        padding: 10px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  .pricing-table-lg {
+    margin-bottom: 124px;
+  }
+  .pricing-table-lg th {
+    padding: 16px;
+    &:nth-child(2) {
+      border-top-left-radius: 4px;
+      white-space: nowrap;
+    }
+    &:nth-child(3) {
+      white-space: nowrap;
+    }
+    &:last-child {
+      border-top-right-radius: 4px;
+    }
+  }
+  .pricing-table-lg td {
+    padding: 30px 20px;
+    &:first-child {
+      width: 580px;
+      &.narrow-cell {
+        width: unset;
+      }
+    }
+  }
+  .pricing-table-lg tr:first-child td:first-child{
+    border-top-left-radius: 4px;
+  }
+  .pricing-table-lg tr.price-buy td {
+    padding: 20px;
+  }
+  tr.price-buy.white-glove-edition td {
+    padding: 0;
+    .white-glove-edition-content {
+      padding: 20px;
+    }
+    .btn-buy-now {
+      padding: 12px 111px;
+    }
+  }
+
+  .pricing-table-lg tr:last-child td {
+    &:nth-child(2) {
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child {
+      border-bottom-right-radius: 4px;
+    }
+  }
+
+  .heading {
+    background-image: image-url('products_services_bg_1.svg'), linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 47.92%, #D2F2FF 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 48px;
+  }
+  .heading-card {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #B1EEFF;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    margin-left: 15px;
+    margin-top: -15px;
+  }
+  .heading-card-number {
+    background-color: #0A98C1;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .heading .leading {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 300;
+    color: #0A98C1;
+    margin-bottom: 36px;
+  }
+  .heading .title-individual {
+    margin-bottom: 24px;
+  }
+  .heading .individual-description {
+    margin-bottom: 68px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .btn-accordion {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    &.btn-white-glove-edition {
+      color: $light-blue;
+    }
+  }
+
+  .personal-brand img {
+    margin-bottom: 16px;
+  }
+  .personal-brand-title, .additional-service-title {
+    margin-bottom: 24px;
+    padding: 0 24px;
+  }
+  .personal-brand-description, .additional-service-description {
+    margin-bottom: 48px;
+  }
+  .additional-service-description {
+    color: #B1EEFF;
+  }
+
+  .edition-separator {
+    border-right: 3px solid #092940;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .pricing-table {
+    color: #fff;
+    margin-bottom: 36px;
+    &-header {
+      padding: 16px 10px;
+      font-weight: 500;
+      font-size: 24px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 68px;
+      button {
+        padding: 0;
+        width: 100%;
+      }
+      &.additional {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        min-height: 70px;
+        &.two-lines {
+          min-height: 84px;
+          padding: 12px 35px;
+        }
+      }
+    }
+    &-content {
+      padding: 30px 0;
+    }
+  }
+
+  .pricing-table-content {
+    padding: 30px 20px;
+  }
+  .bg-light-blue {
+    background-color: $light-blue;
+  }
+  .bg-lighter-blue {
+    background-color: $lighter-blue;
+  }
+  .pricing-table-footer {
+    background-color: $dark-blue;
+    padding: 20px 20px 20px 24px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    &.bg-lightest-blue {
+      background-color: #E0F2FF;
+    }
+  }
+  .price-label-amount {
+    margin-bottom: 20px;
+  }
+  .price-label {
+    color: #B1EEFF;
+    margin-right: 8px;
+  }
+  .price-amount {
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+  }
+  .btn-buy-now {
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #00C0F8;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .white-glove-bg {
+    background-color: #fff;
+    color: #0D3857;
+  }
+  .light-blue-text {
+    color: #B1EEFF;
+  }
+
+  .additional-service-container {
+    background-image: image-url('additional-services-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 68px;
+  }
+
+  .for-org-container {
+    background-image: image-url('products-services-cloud-mb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 68px;
+  }
+
+  .unsure-or-decided {
+    margin-top: 32px;
+    margin-bottom: 36px;
+    font-weight: 300;
+    font-size: 32px;
+    color: #0D3857;
+  }
+  .btn-schedule {
+    width: 100%;
+    margin-bottom: 68px;
+    padding: 15px;
+    color: #fff;
+    background-color: #2DB5B3;
+    border: 1px solid #129C9A;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  .pricing-for-org {
+    margin-bottom: 48px;
+    font-weight: 500;
+    color: #403E3B;
+  }
+  .pricing-poa {
+    font-size: 24px;
+    color: #0D3857;
+    margin-top: 32px;
+    margin-bottom: 68px;
+  }
+}
+
+@media (min-width: 768px) {
+  #home-products_and_services {
+    .heading {
+      background-image: image-url('products_services_bg_2.svg'), linear-gradient(180deg, #FFFFFF 0%, #CAEFFF 86.98%);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .sections-menu {
+      .pricing-table-header {
+        font-size: 24px;
+      }
+      .pricing-table-content {
+        padding: 30px 64px 45px 64px;
+        min-height: 471px;
+      }
+    }
+    .pricing-table {
+      &.mh-366 {
+        min-height: 366px;
+      }
+      &.mh-448 {
+        min-height: 448px;
+      }
+      &.mh-468 {
+        min-height: 468px;
+      }
+      &.mh-492 {
+        min-height: 492px;
+      }
+      &-header {
+        padding: 20px 0;
+      }
+      &-content {
+        flex-grow: 1;
+      }
+    }
+    .btn-schedule {
+      width: auto;
+    }
+
+    .for-org-container {
+      background-image: image-url('products-services-cloud.png');
+    }
+  }
+}

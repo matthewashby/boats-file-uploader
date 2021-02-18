@@ -1,0 +1,202 @@
+@import 'bootstrap-3.1.1.1/variables';
+@import 'bootstrap-3.1.1.1/mixins';
+@import 'bootstrap-3.1.1.1/type';
+
+$title-font-size: 48px;
+$sub-title: 24px;
+$regular-font-size: 16px;
+$grey: #696969;
+
+body {
+  position: relative;
+  line-height: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-size: $regular-font-size;
+  color: $grey;
+  
+  .address-wrapper, #content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .data-details {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.invoice-bg {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 700px;
+  width: 100%;
+  object-fit: contain;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#header {
+  display: block;
+  position: relative;
+  width: 100%;
+
+  .logo {
+    width: auto;
+    position: absolute;
+    right: 30px;
+    margin: 0;
+    top: 6px;
+  }
+  .logo-text {
+    display: block;
+    position: absolute;
+    left: 30px;
+    margin: 0;
+    font-size: $title-font-size;
+    font-weight: 300;
+    top: 5px;
+  }
+}
+
+.address-wrapper {
+  position: relative;
+
+  .payment-method {
+    position: absolute;
+    left: 30px;
+    min-width: 150px;
+    top: 80px;
+  }
+
+  .sub-title {
+    font-size: $sub-title;
+  }
+
+  .company-info {
+    position: absolute;
+    right: 30px;
+    top: 80px;
+
+    p {
+      text-align: right;
+    }
+  }
+}
+
+#payment-info {
+  position: relative;
+
+  .footer-right {
+    position: absolute;
+    top: 0;
+    left: 560px;
+
+    label {
+      display: inline-block;
+      width: 135px;
+    }
+  }
+}
+
+#content {
+  clear: both;
+  padding-top: 178px;
+}
+
+.recipient-info {
+  position: relative;
+
+  > p {
+    max-width: 290px;
+  }
+
+  .data-brief {
+    position: absolute;
+    top: 0px;
+    left: 300px;
+
+    label {
+      display: inline-block;
+      width: 135px;
+      text-align: right;
+      margin-right: 10px;
+    }
+  }
+}
+
+.data-details {
+  margin: 40px 0;
+  clear: both;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  padding: 0 30px;
+
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    &.price {
+      text-align: right;
+    }
+    &.description {
+      width: 60%;
+      white-space: pre-line;
+      overflow: hidden;
+    }
+
+    &.sub-total {
+      text-align: right;
+    }
+  }
+}
+.strong-label {
+  font-weight: bold;
+}
+
+.dl-horizontal {
+  dt {
+    float: left;
+    width: ($component-offset-horizontal - 20);
+    clear: left;
+    text-align: right;
+    @include text-overflow();
+  }
+  dd {
+    margin-left: $component-offset-horizontal;
+    @include clearfix(); // Clear the floated `dt` if an empty `dd` is present
+  }
+}
+
+tr, td, th, .align-bottom tbody, .align-bottom table, thead, tfoot {
+  page-break-inside: avoid;
+}
+
+.align-bottom {
+  page-break-inside: avoid;
+  width: 100%;
+}
+
+#footer {
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.vat-info {
+  margin-top: 20px;
+}
+.terms-info {
+  padding-left: 23px;
+}
+
+.pdf-pagination {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
