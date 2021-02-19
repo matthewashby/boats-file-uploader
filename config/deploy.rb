@@ -10,6 +10,7 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 set :rvm_ruby_version, '2.7.0@file-upload'
 set :rails_env, 'production'
 set :assets_roles, [:app]
+set :rails_assets_groups, :assets
 set :passenger_restart_with_touch, true
 
 set :keep_releases, 5
