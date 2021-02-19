@@ -18,7 +18,7 @@ class FileUploadController < ApplicationController
 
       redirect_to root_path, notice: 'Upload success'
     else
-      render :upload
+      render :upload_form
     end
   end
 
