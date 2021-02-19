@@ -1,14 +1,13 @@
-role :app, %w(dapper@212.140.134.131)
-role :db, %w(dapper@212.140.134.131)
-set :deploy_to, '/var/www/ccl'
-# set :branch, '2.4'
-set :branch, `git rev-parse --abbrev-ref HEAD`.strip
-
-server '212.140.134.131',
-       user: 'dapper',
-       roles: %w{app db},
+role :app, %w(rightwebdesign@195.171.242.174)
+role :db, %w(rightwebdesign@195.171.242.174)
+set :deploy_to, '/var/www/file-upload'
+set :rails_env, 'production'
+set :branch, 'master'
+server '195.171.242.174',
+       user: 'rightwebdesign',
+       roles: %w{app db },
        ssh_options: {
-         user: 'dapper', # overrides user setting above
+         user: 'rightwebdesign', # overrides user setting above
          forward_agent: false,
          auth_methods: %w(publickey)
        }
