@@ -9,7 +9,7 @@ gem 'dotenv-rails'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
-gem 'webpacker', '~> 2.0'
+gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -27,10 +27,10 @@ group :development do
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
 
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.15'
   gem 'capistrano-bundler', '~> 2.0', '>= 2.0.1'
   gem 'capistrano-passenger', '~> 0.2.0'
-  gem 'capistrano-rails'
+  gem 'capistrano-rails', '~> 1.6', '>= 1.6.1'
   gem 'capistrano-rvm', '~> 0.1.2'
   gem 'capistrano-sidekiq'
 end

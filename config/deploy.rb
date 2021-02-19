@@ -14,7 +14,7 @@ set :rails_assets_groups, :assets
 set :passenger_restart_with_touch, true
 
 set :keep_releases, 5
-# set :pty,  false
+set :pty,  false
 
 namespace :deploy do
   desc 'Restart application'
