@@ -5,9 +5,8 @@ set :application, "file-uploader"
 set :repo_url, "git@github.com:matthewashby/boats-file-uploader.git"
 
 append :linked_files, 'config/database.yml', 'config/credentials/production.key'
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/assets', 'public/uploads'
 
-# set :rvm_type, :system
 set :rvm_ruby_version, '2.7.0@file-upload'
 set :rails_env, 'production'
 set :assets_roles, [:app]
