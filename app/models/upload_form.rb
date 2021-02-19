@@ -11,12 +11,12 @@
 #
 
 class UploadForm < ApplicationRecord
-  belongs_to :boat
+  belongs_to :boat, optional: true
 
   has_many :files, class_name: 'UploadedFile', foreign_key: :form_id, dependent: :destroy
 
   validates :name, presence: true
-  validates :comment, presence: true, unless: :boat_id?
+  validates :comment, presence: true, if: -> { boat.blank? }
 
   def self.auto_remove_old_files
     UploadForm.where('created_at <= ?', 1.month.ago).destroy_all

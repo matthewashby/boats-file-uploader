@@ -39,3 +39,5 @@ app/.DS_Store
 /config/credentials/production.key
 /public/sitemap.xml.gz
 /public/uploads/uploaded_file/*
+/public/assets
+/public/packs

@@ -14,39 +14,61 @@ import Dropzone from 'dropzone'
 Dropzone.autoDiscover = false
 
 document.addEventListener("turbolinks:load", () => {
+  $.validator.addMethod('filesize', function (value, element, param) {
+    return this.optional(element) || (element.files[0].size <= param)
+  }, 'File size must be less than 2GB');
+
   $("#new_upload_form").validate({
     rules: {
       'upload_form[name]': {
         required: true
       },
+      'upload_form[files][]': {
+        required: true,
+        filesize: (2 * 1024 * 1024 * 1024)
+      },
       'upload_form[comment]': {
-        required: function(element){
+        required: (element) => {
           return $("#upload_form_boat_id").val().length === 0;
         }
       }
-    }
-  });
-
-  var myDropzone = new Dropzone("#file-upload", {
-    timeout: 9000000,
-    addRemoveLinks: true,
-    headers: {
-    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
     },
-    maxFilesize: (2 * 1024)
-  });
+    submitHandler: (form) => {
+      let data = new FormData(form)
+      data.append("files", $(form).find("input[type='file']").files)
+      $("#progress-bar").show()
+      $("#suggess-message").hide()
+      $(form).find("input[type='submit']").attr("disabled", true)
 
-  myDropzone.on("success", function (file, response) {
-    var input = $("<input type='hidden' name='upload_form[files][]'></input>")
-    input.val(response.id)
+      $.ajax({
+        xhr: () => {
+          var xhr = new window.XMLHttpRequest()
 
-    $("#new_upload_form").append(input)
-    $("#new_upload_form input[type='submit']").attr("disabled", false)
-  });
+          xhr.upload.addEventListener("progress", (evt) => {
+            if (evt.lengthComputable) {
+              let percentComplete = evt.loaded / evt.total;
+              percentComplete = parseInt(percentComplete * 100);
+              console.log(percentComplete);
 
-  myDropzone.on("removedfile", function(file){
-    if ($(".dz-preview").length === 0) {
-      $("#new_upload_form input[type='submit']").attr("disabled", true)
+              $("#progress-bar .loading-bar").css("width", `${percentComplete}%`)
+            }
+          }, false);
+
+          return xhr;
+        },
+        type: "POST",
+        url: "/upload",
+        contentType: false,
+        processData: false,
+        data: data,
+        success: () =>{
+          $(form)[0].reset()
+          $(form).find("input[type='submit']").attr("disabled", false)
+          $("#progress-bar").hide()
+          $("#suggess-message").show()
+          $("#progress-bar .loading-bar").css("width", `${0}%`)
+        }
+      });
     }
-  })
+  });
 })

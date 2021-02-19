@@ -2,14 +2,16 @@
   .card
     = image_tag 'Boats-co-uk-since1969Final.png', class: 'logo'
 
-    = simple_form_for UploadForm.new, url: upload_path, method: :post do |f|
+    = simple_form_for UploadForm.new, url: upload_path, method: :post, html: { multipart: true } do |f|
       = f.input :name, label: false, input_html: { placeholder: 'Name' }
-      = f.input :boat_id, label: false, collection: Boat.where(state: :completed, is_live: true).sort_by(&:display_description), value_method: :id, label_method: :display_description
+      = f.input :files, label: false, as: :file, input_html: { multiple: true }
+      = f.input :boat_id, label: false, collection: Boat.where(state: :completed, is_live: true).sort_by(&:display_description), value_method: :id, label_method: :display_description, include_blank: 'Select Boat'
       = f.input :comment, label: false, as: :text, input_html: { rows: 4, placeholder: 'Comment' }
 
-      #file-upload.dropzone.needsclick{ action: upload_file_path }
-        .dz-message.needsclick
-          Drop files here or click to upload.
-
       .actions
-        = f.submit 'Upload', class: 'btn btn-primary', data: { disable_with: 'Uploading' }, disabled: true
+        = f.submit 'Upload', class: 'btn btn-primary', data: { disable_with: 'Uploading' }
+
+      #progress-bar
+        .loading-bar
+      #suggess-message
+        %p File has been successfully uploaded

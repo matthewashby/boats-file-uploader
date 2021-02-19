@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: 'sans-serif';
 }
 
 .form-wrapper {
@@ -19,6 +20,23 @@ body {
   position: relative;
   z-index: 1;
   text-align: center;
+
+  #progress-bar {
+    display: none;
+    height: 24px;
+    background-color: #f1f1f1;
+    
+    .loading-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #57b846;
+    }
+  }
+
+  #suggess-message {
+    display: none;
+    color: #57b846;
+  }
 
   .logo {
     max-width: 200px;
@@ -45,7 +63,6 @@ body {
 
       .title {
         display: block;
-        font-family: JosefinSans-Bold;
         font-size: 30px;
         color: #333;
         line-height: 1.2;
@@ -61,7 +78,7 @@ body {
         display: flex;
         text-align: right;
         flex-wrap: wrap;
-        padding-top: 13px;
+        margin-bottom: 25px;
         justify-content: flex-end;
 
         .btn {
@@ -76,7 +93,6 @@ body {
           min-width: 160px;
           height: 42px;
           background-color: #57b846;
-          font-family: JosefinSans-Bold;
           font-size: 14px;
           color: #fff;
           line-height: 1.2;
@@ -105,13 +121,21 @@ body {
         background-color: #fff;
         border: 1px solid #e6e6e6;
         margin-bottom: 30px;
-        position: relative;
+        display: flex;
+
+        &.upload_form_files {
+          padding: 10px 0;
+
+          input {
+            height: auto;
+          }
+        }
 
         label.error {
           position: absolute;
           left: 0;
           color: red;
-          bottom: -20px;
+          bottom: -25px;
         }
 
         input, select {
@@ -120,7 +144,6 @@ body {
           display: block;
           width: 100%;
           background: 0 0;
-          font-family: JosefinSans-Bold;
           font-size: 15px;
           color: #1b3815;
           line-height: 1.2;
@@ -135,7 +158,6 @@ body {
           display: block;
           width: 100%;
           background: 0 0;
-          font-family: JosefinSans-Bold;
           font-size: 15px;
           color: #1b3815;
           line-height: 1.2;
@@ -153,6 +175,12 @@ body {
 
     .card {
       padding: 10px 15px 65px;
+
+      form div.input {
+        input, select {
+          height: 40px;
+        }
+      }
     }
   }
 }
