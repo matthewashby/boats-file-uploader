@@ -40,3 +40,4 @@ yarn-debug.log*
 app/.DS_Store
 /config/credentials/production.key
 /public/sitemap.xml.gz
+/public/uploads/

@@ -10,11 +10,10 @@
 #
 
 class UploadedFile < ApplicationRecord
-  # mount_uploader :file, UploadFileUploader
+  mount_uploader :file, UploadFileUploader
+  validates :file, file_size: { less_than_or_equal_to: 2.gigabytes }
 
-  # validates :file, file_size: { less_than_or_equal_to: 2.gigabytes }
-
-  # def self.remove_unattached_file
-  #   UploadedFile.where(form_id: nil).destroy_all
-  # end
+  def self.remove_unattached_file
+    UploadedFile.where(form_id: nil).destroy_all
+  end
 end

@@ -1,0 +1,6 @@
+- @fields_changed.each do |name, value|
+  %p= "#{name.gsub(/_/i, " ").capitalize} has changed from \"#{value[0]}\" to \"#{value[1]}\""
+
+%p View this boat on <a href="#{boat_url(@boat)}" target="_blank">Expert</a>
+%p View this boat on <a href="https://www.boats.co.uk/boats-for-sale/#{@boat.manufacturer.try(:name)}-#{@boat.model.try(:name)}-#{@boat.id}" target="_blank">Boats.co.uk</a>
+%p This change was made by #{@user.first_name} #{@user.last_name}

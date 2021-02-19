@@ -29,7 +29,6 @@ Rails.application.configure do
   config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = 'https://citycareerlab.com'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -89,18 +88,22 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'citycareerlab.com' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-      address:              'mail.citycareerlab.com',
-      port:                 '587',
-      domain:               'citycareerlab.com',
-      user_name:            'website@citycareerlab.com',
-      password:             '4qu!tSnake8',
-      authentication:       'login',
-      openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE,
-      enable_starttls_auto: true
+   config.action_mailer.smtp_settings = {
+    user_name: 'expert@boats.co.uk',
+    password: 'tuh493r89',
+    domain: 'expert.boats.co.uk',
+    address: 'mail.boats.co.uk',
+    port: 587,
+    authentication: :plain,
+    enable_starttls_auto: true
   }
+
+  # ActionMailer Config
+  config.action_mailer.default_options = { from: 'admin@boats.co.uk'}
+  config.action_mailer.default_url_options = { host: 'expert.boats.co.uk', port: 80 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector

@@ -1,16 +1,15 @@
-.container
-  .row
-    .col-xs-12.col-sm-8.col-sm-offset-2.text-center
-      = image_tag 'Boats-co-uk-since1969Final.png', class: 'logo'
+.container.form-wrapper
+  .card
+    = image_tag 'Boats-co-uk-since1969Final.png', class: 'logo'
 
-      = simple_form_for UploadForm.new, url: upload_path, method: :post do |f|
-        = f.input :name
-        = f.input :boat_id, collection: Boat.where(state: :completed, is_live: true).sort_by(&:display_description), value_method: :id, label_method: :display_description
-        = f.input :comment, as: :text, input_html: { rows: 4 }
+    = simple_form_for UploadForm.new, url: upload_path, method: :post do |f|
+      = f.input :name, label: false, input_html: { placeholder: 'Name' }
+      = f.input :boat_id, label: false, collection: Boat.where(state: :completed, is_live: true).sort_by(&:display_description), value_method: :id, label_method: :display_description
+      = f.input :comment, label: false, as: :text, input_html: { rows: 4, placeholder: 'Comment' }
 
-        #file-upload.dropzone.needsclick{ action: upload_file_path }
-          .dz-message.needsclick
-            Drop files here or click to upload.
+      #file-upload.dropzone.needsclick{ action: upload_file_path }
+        .dz-message.needsclick
+          Drop files here or click to upload.
 
-        .text-right
-          = f.submit 'Upload', class: 'btn btn-primary', data: { disable_with: 'Uploading' }, disabled: true
+      .actions
+        = f.submit 'Upload', class: 'btn btn-primary', data: { disable_with: 'Uploading' }, disabled: true

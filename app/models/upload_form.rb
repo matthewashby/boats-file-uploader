@@ -13,7 +13,7 @@
 class UploadForm < ApplicationRecord
   belongs_to :boat
 
-  # has_many :files, class_name: 'UploadedFile', foreign_key: :form_id, dependent: :destroy
+  has_many :files, class_name: 'UploadedFile', foreign_key: :form_id, dependent: :destroy
 
   validates :name, presence: true
   validates :comment, presence: true, unless: :boat_id?

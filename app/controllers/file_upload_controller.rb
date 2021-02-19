@@ -14,7 +14,7 @@ class FileUploadController < ApplicationController
       end
 
       # UserMailer.notify_new_file_upload(@form).deliver_later
-      UserMailer.notify_new_file_upload(@form).deliver
+      UserMailer.notify_new_file_upload(@form).deliver_now
 
       redirect_to root_path, notice: 'Upload success'
     else

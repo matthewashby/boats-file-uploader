@@ -1,0 +1,13 @@
+%p Hi 
+%p New files has been uploaded to expert.
+%p Name: #{@uploaded_form.name}
+%p Message: #{@uploaded_form.comment}
+%p Boat: #{@uploaded_form.boat&.display_description}
+
+%p Files:
+%ul
+  - @uploaded_form.files.each do |file|
+    %li= link_to file.file.name, file_url(file)
+
+%p Thanks
+%p Expert Team

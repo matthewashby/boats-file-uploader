@@ -15,6 +15,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'sentry-raven'
 gem 'simple_form'
+gem 'carrierwave'
+gem 'file_validators'
 
 group :development do
   gem 'letter_opener'
