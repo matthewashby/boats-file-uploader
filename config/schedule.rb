@@ -1,4 +1,4 @@
-# Might be too much, but it doesn't hurt
-every 2.hours do
-  rake "-s sitemap:refresh"
+every 1.day, at: '4:30 am' do
+  runner "UploadForm.auto_remove_old_files"
+  runner "UploadedFile.remove_unattached_file"
 end
