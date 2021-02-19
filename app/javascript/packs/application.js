@@ -9,10 +9,6 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery-validation")
 
-import Dropzone from 'dropzone'
-
-Dropzone.autoDiscover = false
-
 document.addEventListener("turbolinks:load", () => {
   $.validator.addMethod('filesize', function (value, element, param) {
     return this.optional(element) || (element.files[0].size <= param)
