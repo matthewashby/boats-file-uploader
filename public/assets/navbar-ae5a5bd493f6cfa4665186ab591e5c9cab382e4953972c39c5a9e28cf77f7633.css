@@ -1,0 +1,15 @@
+/* line 1, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 4, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .nav-item.active {
+  border-bottom: 4px solid #2DB5B3;
+}
+
+/* line 7, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .nav-link {
+  margin-left: 10px;
+}

@@ -1,0 +1,16 @@
+/* line 1, app/assets/stylesheets/footer.scss */
+footer {
+  background-color: #0D3857;
+  padding: 36px 0;
+}
+
+/* line 4, app/assets/stylesheets/footer.scss */
+footer a {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+/* line 7, app/assets/stylesheets/footer.scss */
+footer a.active {
+  color: #2DB5B3;
+}

@@ -1,0 +1,77 @@
+/* line 3, app/assets/stylesheets/footer.scss */
+.arrow-upward {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+  text-align: right;
+  right: 50px;
+}
+
+/* line 10, app/assets/stylesheets/footer.scss */
+.arrow-upward img {
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+}
+
+/* line 17, app/assets/stylesheets/footer.scss */
+footer {
+  background-color: #0D3857;
+  padding: 36px 0;
+  text-align: center;
+}
+
+/* line 21, app/assets/stylesheets/footer.scss */
+footer .justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+/* line 24, app/assets/stylesheets/footer.scss */
+footer a {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* line 28, app/assets/stylesheets/footer.scss */
+footer a.active {
+  color: #2DB5B3;
+}
+
+/* line 31, app/assets/stylesheets/footer.scss */
+footer a:hover {
+  text-decoration: none;
+  color: #2DB5B3;
+}
+
+/* line 36, app/assets/stylesheets/footer.scss */
+footer .footer-item-container {
+  margin-bottom: 20px;
+}
+
+/* line 39, app/assets/stylesheets/footer.scss */
+footer .copy-right {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 13px;
+}
+
+/* line 45, app/assets/stylesheets/footer.scss */
+footer .text-active {
+  color: #2DB5B3;
+}
+
+@media (min-width: 768px) {
+  /* line 51, app/assets/stylesheets/footer.scss */
+  footer {
+    text-align: left;
+  }
+  /* line 53, app/assets/stylesheets/footer.scss */
+  footer .footer-item-container {
+    margin-bottom: 0;
+  }
+  /* line 55, app/assets/stylesheets/footer.scss */
+  footer .footer-item-container:last-child {
+    z-index: 1;
+  }
+}

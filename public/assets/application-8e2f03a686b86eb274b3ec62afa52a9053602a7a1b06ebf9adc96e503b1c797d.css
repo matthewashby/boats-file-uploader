@@ -1,0 +1,351 @@
+/* line 1, app/assets/stylesheets/footer.scss */
+footer {
+  background-color: #0D3857;
+  padding: 36px 0;
+}
+
+/* line 4, app/assets/stylesheets/footer.scss */
+footer a {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+/* line 7, app/assets/stylesheets/footer.scss */
+footer a.active {
+  color: #2DB5B3;
+}
+/* line 1, app/assets/stylesheets/home/index.scss */
+#home-index {
+  color: #0D3857;
+}
+
+/* line 3, app/assets/stylesheets/home/index.scss */
+#home-index header {
+  background-image: url("home-heading-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 8, app/assets/stylesheets/home/index.scss */
+#home-index header .content {
+  padding: 68px 0;
+}
+
+/* line 10, app/assets/stylesheets/home/index.scss */
+#home-index header .content .welcome {
+  color: #ABEBFF;
+  font-weight: 300;
+}
+
+/* line 14, app/assets/stylesheets/home/index.scss */
+#home-index header .content .logo-slogan {
+  padding: 28px 0 48px 0;
+}
+
+/* line 20, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction {
+  background-image: url("home-intro-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 68px;
+  padding-bottom: 88px;
+}
+
+/* line 28, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction .caree-coach-leading {
+  margin-bottom: 24px;
+}
+
+/* line 31, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction .career-coach-item {
+  margin-bottom: 20px;
+}
+
+/* line 35, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction .dash {
+  height: 2px;
+  width: 28px;
+  background-color: #0D3857;
+  margin: 0 10px;
+}
+
+/* line 42, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction .subject {
+  padding: 5px 0;
+  min-width: 190px;
+  max-width: 190px;
+  font-weight: 600;
+}
+
+/* line 47, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction .subject.odd {
+  background: rgba(10, 152, 193, 0.1);
+  color: #0A98C1;
+}
+
+/* line 51, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction .subject.even {
+  background: rgba(45, 181, 179, 0.1);
+  color: #2DB5B3;
+}
+
+/* line 58, app/assets/stylesheets/home/index.scss */
+#home-index section.introduction .about-me-link a {
+  background: #2DB5B3;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 66, app/assets/stylesheets/home/index.scss */
+#home-index section.podcast {
+  background-image: url("podcast-bg.png");
+  padding-top: 68px;
+  padding-bottom: 88px;
+}
+
+/* line 70, app/assets/stylesheets/home/index.scss */
+#home-index section.podcast .podcast-leading {
+  margin-bottom: 36px;
+}
+
+/* line 73, app/assets/stylesheets/home/index.scss */
+#home-index section.podcast .podcast-item {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+/* line 79, app/assets/stylesheets/home/index.scss */
+#home-index section.podcast .podcast-item-heading p {
+  margin-bottom: 0;
+}
+
+/* line 82, app/assets/stylesheets/home/index.scss */
+#home-index section.podcast .podcast-item-heading .media {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+/* line 87, app/assets/stylesheets/home/index.scss */
+#home-index section.podcast .podcast-item-heading .sub-title {
+  color: #ADDDFF;
+}
+
+/* line 90, app/assets/stylesheets/home/index.scss */
+#home-index section.podcast .podcast-item-heading .date {
+  padding-top: 8px;
+  color: #2DB5B3;
+}
+
+/* line 97, app/assets/stylesheets/home/index.scss */
+#home-index .consultation {
+  background-image: url("home-consultation.png");
+  /* fallback */
+  background-image: url("home-consultation.png"), linear-gradient(180deg, #FFFFFF 0%, #E9F8FF 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 88px 0;
+}
+
+/* line 104, app/assets/stylesheets/home/index.scss */
+#home-index .consultation .leading {
+  color: #0A98C1;
+}
+
+/* line 108, app/assets/stylesheets/home/index.scss */
+#home-index .consultation .statement-item {
+  border-bottom: 1px solid #9EC4E0;
+  padding: 20px 0;
+}
+
+/* line 111, app/assets/stylesheets/home/index.scss */
+#home-index .consultation .statement-item .order {
+  background: #0A98C1;
+  min-width: 30px;
+  max-height: 30px;
+  margin-right: 16px;
+}
+
+/* line 118, app/assets/stylesheets/home/index.scss */
+#home-index .consultation .statement .statement-item:last-child {
+  border-bottom: 0;
+}
+
+/* line 123, app/assets/stylesheets/home/index.scss */
+#home-index .consultation-schedule {
+  padding-top: 48px;
+}
+
+/* line 125, app/assets/stylesheets/home/index.scss */
+#home-index .consultation-schedule .quote {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* line 129, app/assets/stylesheets/home/index.scss */
+#home-index .consultation-schedule button {
+  background-color: #2DB5B3;
+  margin-top: 36px;
+}
+
+/* line 135, app/assets/stylesheets/home/index.scss */
+#home-index .people-org {
+  background-image: url("home-cloud-bg.png"), linear-gradient(180deg, #D2F2FF 0%, #F0FBFF 17.19%, #FFFFFF 61.46%, #D8F1FC 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 88px;
+}
+
+/* line 141, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .leading {
+  margin-bottom: 48px;
+}
+
+/* line 144, app/assets/stylesheets/home/index.scss */
+#home-index .people-org-item {
+  padding: 20px;
+}
+
+/* line 146, app/assets/stylesheets/home/index.scss */
+#home-index .people-org-item .name {
+  font-weight: 600;
+}
+
+/* line 149, app/assets/stylesheets/home/index.scss */
+#home-index .people-org-item p {
+  margin-bottom: 0;
+}
+
+/* line 152, app/assets/stylesheets/home/index.scss */
+#home-index .people-org-item .media {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* line 156, app/assets/stylesheets/home/index.scss */
+#home-index .people-org-item .media img {
+  object-fit: cover;
+}
+
+/* line 160, app/assets/stylesheets/home/index.scss */
+#home-index .people-org-item .comment {
+  padding-top: 16px;
+}
+
+/* line 164, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .get-in-touch {
+  margin-top: 88px;
+  margin-bottom: 24px;
+}
+
+/* line 168, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact {
+  margin-bottom: 88px;
+}
+
+/* line 170, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-message-content, #home-index .people-org .contact-info-content {
+  padding: 20px 5px 4px 5px;
+}
+
+/* line 173, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-message {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 177, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-message-content form {
+  margin-top: 24px;
+}
+
+/* line 179, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-message-content form .form-control {
+  background-color: #ECF3F8;
+  border: 0;
+}
+
+/* line 183, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-message-content form textarea {
+  resize: none;
+}
+
+/* line 189, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-info {
+  background-image: url("home-contact-info.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 196, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-info-content {
+  color: #fff;
+}
+
+/* line 198, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-info-content .leading {
+  margin-bottom: 36px;
+}
+
+/* line 201, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-info-content .contact-icon {
+  margin-right: 15px;
+}
+
+/* line 204, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-info-content div {
+  margin-top: 24px;
+}
+
+/* line 207, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-info-content .follow-us {
+  margin-top: 36px;
+}
+
+/* line 211, app/assets/stylesheets/home/index.scss */
+#home-index .people-org .contact-info-content .socials img {
+  margin-right: 20px;
+}
+/* line 1, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 4, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .nav-item.active {
+  border-bottom: 4px solid #2DB5B3;
+}
+
+/* line 7, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .nav-link {
+  margin-left: 10px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+ 
+@import 'navbar';
+@import 'footer';
+@import 'home/*';

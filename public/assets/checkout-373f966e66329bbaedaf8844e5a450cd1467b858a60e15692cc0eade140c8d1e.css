@@ -1,0 +1,6 @@
+/* line 2, app/assets/stylesheets/checkout.scss */
+body[id^='checkout-'] section {
+  background-image: url(/assets/blog-bg-2e5d8994c23710aeb0e5bf12c72a3898e4e8ebe7ef2a88f9a1dcd687a53fc6c0.svg), linear-gradient(180deg, #FFFFFF 0%, #D9F4FF 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

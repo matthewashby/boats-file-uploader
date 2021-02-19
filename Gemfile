@@ -26,7 +26,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
-
+  
+  # gem 'sshkit', '1.17.0'
   gem 'capistrano', '~> 3.15'
   gem 'capistrano-bundler', '~> 2.0', '>= 2.0.1'
   gem 'capistrano-passenger', '~> 0.2.0'

@@ -1,0 +1,127 @@
+/* line 3, app/assets/stylesheets/navbar.scss */
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.5;
+  display: none;
+  z-index: 10;
+}
+
+/* line 13, app/assets/stylesheets/navbar.scss */
+.navbar-container {
+  z-index: 20;
+  position: relative;
+  background-color: #fff;
+}
+
+/* line 19, app/assets/stylesheets/navbar.scss */
+header {
+  box-shadow: 0px 4px 25px rgba(77, 173, 227, 0.2);
+  margin-bottom: 22px;
+}
+
+/* line 24, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light {
+  padding: 0;
+}
+
+/* line 26, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-brand {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 30, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-toggler {
+  outline: none;
+  background-color: #2DB5B3;
+}
+
+/* line 34, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+  background-image: url(/assets/menu-burger-031936f0bd1accccfe7a9e6a07cb5eb5988ad74a7215e4d8ed742d0353bf1a2e.svg);
+}
+
+/* line 39, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url(/assets/menu-close-98c544dea18a5f3a9fd459a40b6f8d4961aaf19f5620fd86390ef9e78eb60fc0.svg);
+}
+
+/* line 44, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-collapse {
+  background-color: #0D3857;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* line 48, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-collapse .nav-link {
+  color: #fff;
+  line-height: 17px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* line 53, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-collapse .nav-link.active {
+  color: #2DB5B3;
+}
+
+/* line 57, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .navbar-collapse .text-active {
+  color: #2DB5B3;
+}
+
+/* line 61, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .nav-item {
+  max-width: unset;
+}
+
+/* line 63, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .nav-item:not(:last-child) {
+  border-bottom: 1px solid #1D4D6F;
+}
+
+/* line 66, app/assets/stylesheets/navbar.scss */
+.navbar.navbar-expand-lg.navbar-light .nav-item.active {
+  border-bottom: 4px solid #2DB5B3;
+}
+
+@media (min-width: 768px) {
+  /* line 74, app/assets/stylesheets/navbar.scss */
+  .navbar.navbar-expand-lg.navbar-light .navbar-collapse {
+    background-color: inherit;
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+  /* line 78, app/assets/stylesheets/navbar.scss */
+  .navbar.navbar-expand-lg.navbar-light .navbar-collapse .nav-link {
+    color: #0D3857;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  /* line 84, app/assets/stylesheets/navbar.scss */
+  .navbar.navbar-expand-lg.navbar-light .navbar-collapse .nav-link.active {
+    color: #2DB5B3;
+  }
+  /* line 87, app/assets/stylesheets/navbar.scss */
+  .navbar.navbar-expand-lg.navbar-light .navbar-collapse .nav-link:hover {
+    color: #2DB5B3;
+  }
+  /* line 93, app/assets/stylesheets/navbar.scss */
+  .navbar.navbar-expand-lg.navbar-light .nav-item:not(:last-child) {
+    border-bottom: 0;
+  }
+  /* line 96, app/assets/stylesheets/navbar.scss */
+  .navbar.navbar-expand-lg.navbar-light .nav-item.mwp-135 {
+    max-width: 135px;
+  }
+  /* line 99, app/assets/stylesheets/navbar.scss */
+  .navbar.navbar-expand-lg.navbar-light .nav-item.mwp-100 {
+    max-width: 100px;
+  }
+}
