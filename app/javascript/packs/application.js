@@ -28,6 +28,7 @@ document.addEventListener("turbolinks:load", () => {
   });
 
   var myDropzone = new Dropzone("#file-upload", {
+    timeout: 9000000,
     addRemoveLinks: true,
     headers: {
     'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
