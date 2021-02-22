@@ -89,8 +89,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
    config.action_mailer.smtp_settings = {
-    user_name: 'expert@boats.co.uk',
-    password: 'tuh493r89',
+    user_name: ENV['SMTP_USER'],
+    password: ENV['SMTP_PWD'],
     domain: 'uploads.boats.co.uk',
     address: 'mail.boats.co.uk',
     port: 587,
@@ -99,7 +99,7 @@ Rails.application.configure do
   }
 
   # ActionMailer Config
-  config.action_mailer.default_options = { from: 'admin@boats.co.uk'}
+  config.action_mailer.default_options = { from: 'uploads@boats.co.uk'}
   config.action_mailer.default_url_options = { host: 'uploads.boats.co.uk', port: 80 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true

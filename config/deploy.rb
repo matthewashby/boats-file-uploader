@@ -4,7 +4,7 @@ lock "~> 3.15.0"
 set :application, "file-uploader"
 set :repo_url, "git@github.com:matthewashby/boats-file-uploader.git"
 
-append :linked_files, 'config/database.yml', 'config/credentials/production.key'
+append :linked_files, 'config/database.yml', 'config/credentials/production.key', '.env'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/uploads'
 # append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/assets', 'public/uploads'
 
