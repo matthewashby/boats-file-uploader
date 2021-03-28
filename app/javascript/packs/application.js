@@ -10,18 +10,13 @@ require("channels")
 require("jquery-validation")
 
 document.addEventListener("turbolinks:load", () => {
-  $.validator.addMethod('filesize', function (value, element, param) {
-    return this.optional(element) || (element.files[0].size <= param)
-  }, 'File size must be less than 2GB');
-
   $("#new_upload_form").validate({
     rules: {
       'upload_form[name]': {
         required: true
       },
       'upload_form[files][]': {
-        required: true,
-        filesize: (2 * 1024 * 1024 * 1024)
+        required: true
       },
       'upload_form[comment]': {
         required: (element) => {
