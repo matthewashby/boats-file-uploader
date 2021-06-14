@@ -21,4 +21,17 @@ class UploadForm < ApplicationRecord
   def self.auto_remove_old_files
     UploadForm.where('created_at <= ?', 1.month.ago).destroy_all
   end
+
+  def make_zip_file
+    zipfile_name = File.join("#{Rails.root}/public/uploads/uploaded_file/", "#{self.id}.zip")
+    File.delete(zipfile_name) if File.exist?(zipfile_name)
+
+    Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
+      files.each do |file|
+        zipfile.add(file.file.url.split("/").last, file.file.path)
+      end
+
+      zipfile.get_output_stream("success") { |f| f.write "All done successfully" }
+    end
+  end
 end
