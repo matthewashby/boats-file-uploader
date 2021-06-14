@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'file_validators'
 gem 'whenever', require: false
+gem 'rubyzip'
 
 group :development do
   gem 'letter_opener'
