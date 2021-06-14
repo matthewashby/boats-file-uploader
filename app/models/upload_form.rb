@@ -32,8 +32,6 @@ class UploadForm < ApplicationRecord
       files.each do |file|
         zipfile.add(file.file.url.split("/").last, file.file.path)
       end
-
-      zipfile.get_output_stream("success") { |f| f.write "All done successfully" }
     end
   end
 
