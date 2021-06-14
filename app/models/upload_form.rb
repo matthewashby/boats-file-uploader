@@ -22,7 +22,10 @@ class UploadForm < ApplicationRecord
   after_commit :make_zip_file, on: :create
 
   def self.auto_remove_old_files
-    UploadForm.where('created_at <= ?', 3.weeks.ago).destroy_all
+    UploadForm.where('created_at <= ?', 3.weeks.ago).find_each do |form|
+      File.delete(form.zip_path)
+      form.destroy
+    end
   end
 
   def self.send_mail
