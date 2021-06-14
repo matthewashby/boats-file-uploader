@@ -33,6 +33,9 @@ class UploadForm < ApplicationRecord
         zipfile.add(file.file.url.split("/").last, file.file.path)
       end
     end
+
+    sleep(2)
+    UserMailer.notify_new_file_upload(self).deliver_later
   end
 
   def zip_path

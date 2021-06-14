@@ -12,8 +12,6 @@ class FileUploadController < ApplicationController
         UploadedFile.create(file: file, form_id: @form.id)
       end
 
-      UserMailer.notify_new_file_upload(@form).deliver_now
-
       render json: @form, status: :ok
     else
       render json: { error: true }, status: :ok
