@@ -26,7 +26,7 @@ class UploadForm < ApplicationRecord
   end
 
   def self.send_mail
-    UploadForm.where('created_at <= ?', 10.minutes.ago).where(sent_at: nil).each(&:send_mail)
+    UploadForm.where('created_at <= ?', 10.minutes.ago).where(sent_at: nil, zip_ready: false).each(&:send_mail)
   end
 
   def make_zip_file
@@ -37,9 +37,12 @@ class UploadForm < ApplicationRecord
         zipfile.add(file.file.url.split("/").last, file.file.path)
       end
     end
+
+    update_columns(zip_ready: true)
   end
 
   def send_mail
+    return unless zip_ready?
     return if sent_at?
 
     UserMailer.notify_new_file_upload(self).deliver_now
