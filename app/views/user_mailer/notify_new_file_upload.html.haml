@@ -9,5 +9,8 @@
   - @uploaded_form.files.each do |file|
     %li= link_to file.file.name, file_url(file)
 
+%br
+= link_to 'Download All', @uploaded_form.zip_url
+
 %p Thanks
 %p Expert Team

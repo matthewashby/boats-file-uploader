@@ -19,20 +19,29 @@ class UploadForm < ApplicationRecord
   validates :name, presence: true
   validates :comment, presence: true, if: -> { boat.blank? }
 
+  after_commit :make_zip_file, on: :create
+
   def self.auto_remove_old_files
     UploadForm.where('created_at <= ?', 1.month.ago).destroy_all
   end
 
   def make_zip_file
-    zipfile_name = File.join("#{Rails.root}/public/uploads/uploaded_file/", "#{self.id}.zip")
-    File.delete(zipfile_name) if File.exist?(zipfile_name)
+    File.delete(zip_path) if File.exist?(zip_path)
 
-    Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
+    Zip::File.open(zip_path, Zip::File::CREATE) do |zipfile|
       files.each do |file|
         zipfile.add(file.file.url.split("/").last, file.file.path)
       end
 
       zipfile.get_output_stream("success") { |f| f.write "All done successfully" }
     end
+  end
+
+  def zip_path
+    File.join("#{Rails.root}/public/uploads/uploaded_file/", "#{self.id}.zip")
+  end
+
+  def zip_url
+    "https://uploads.boats.co.uk/uploads/uploaded_file/#{self.id}.zip"
   end
 end
