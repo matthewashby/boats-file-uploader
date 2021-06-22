@@ -29,7 +29,7 @@ class UploadForm < ApplicationRecord
   end
 
   def self.send_mail
-    UploadForm.where('created_at <= ?', 10.minutes.ago).where(sent_at: nil, zip_ready: false).each(&:send_mail)
+    UploadForm.where('created_at <= ?', 10.minutes.ago).where(sent_at: nil, zip_ready: true).each(&:send_mail)
   end
 
   def make_zip_file
